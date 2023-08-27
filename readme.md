@@ -36,11 +36,7 @@ Note: Enter the same passphrase for all the 3 operations below
 1. openssl genpkey -out client.key -algorithm RSA \
    -pkeyopt rsa_keygen_bits:2048 -aes-128-cbc
 
-2. <u><h3>CSR configuration file </h3</u>
-
-</u>
-
-1. openssl req -new -config ssl2.conf -key client.key -out client.csr 
-2. openssl x509 -req -days 365 -in client.csr -signkey client.key -out client.crt
-3. cp client.crt ca.crt
+2.openssl req -new -config ssl2.conf -key client.key -out client.csr 
+3. openssl x509 -req -days 365 -in client.csr -signkey client.key -out client.crt
+4. cp client.crt ca.crt
 
