@@ -39,29 +39,8 @@ Note: Enter the same passphrase for all the 3 operations below
 2. <u><h3>CSR configuration file </h3</u>
 
 </u>
-```
-[req]
-prompt = true
-distinguished_name = dn
-req_extensions = ext
-[dn]
-C  = AU
-ST = Victoria
-L  = Melbourne
-O  = rajkumar
-OU = integration
-CN = www.rajkumar.com
-emailAddress = rajkumar@earth.com
-[ext]
-subjectAltName = @sans
-[sans]
-DNS.0 = localhost
-DNS.1 = www.anz.com
-DNS.2 = anz.com
-```
 
-
-3. openssl req -new -config ssl.conf -key client.key -out client.csr 
-4. openssl x509 -req -days 365 -in client.csr -signkey client.key -out client.crt
-5. cp client.crt ca.crt
+1. openssl req -new -config ssl2.conf -key client.key -out client.csr 
+2. openssl x509 -req -days 365 -in client.csr -signkey client.key -out client.crt
+3. cp client.crt ca.crt
 
