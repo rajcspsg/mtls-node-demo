@@ -63,4 +63,5 @@ DNS.2 = anz.com
 
 3. openssl req -new -config ssl.conf -key client.key -out client.csr 
 4. openssl x509 -req -days 365 -in client.csr -signkey client.key -out client.crt
+5. cp client.crt ca.crt
 
